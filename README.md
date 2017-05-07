@@ -11,7 +11,8 @@ git clone https://git.coding.net/YLY_TTTT/lssea.git 把代码拉下来
 
 docker ps 找到mysql那一行 第一列是CONTAINER ID
 
-docker exec -i ${CONTAINER ID} mysql -uroot --password=cancel lssea < mysql_lssea_database.sql 
+docker exec -i ${CONTAINER ID} mysql -uroot --password=cancel lssea < mysql_lssea_database.sql
+docker exec -i 974f22472386 mysql -uroot --password=cancel  -e "create database lssea"
 
 导入mysql数据库
 
@@ -19,10 +20,5 @@ docker exec -i ${CONTAINER ID} mysql -uroot --password=cancel lssea < mysql_lsse
 
 正常会提示mysql连接错误 
 
-> 需要修改代码里面的db_hostname为mysql
-
-> 另外将代码中的http://www.lssea.com 修改为localhost或者docker-machine ip 
-
-> 准备代码中添加测试模型配置 避免修改
 
 已添加测试模型 修改config.php admin/config.php system/config/default.php 里test字段即可
