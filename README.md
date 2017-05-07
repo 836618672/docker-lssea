@@ -11,8 +11,10 @@ git clone https://git.coding.net/YLY_TTTT/lssea.git 把代码拉下来
 
 docker ps 找到mysql那一行 第一列是CONTAINER ID
 
+docker exec -i ${CONTAINER ID}  mysql -uroot --password=cancel  -e "create database lssea"
+
 docker exec -i ${CONTAINER ID} mysql -uroot --password=cancel lssea < mysql_lssea_database.sql
-docker exec -i 974f22472386 mysql -uroot --password=cancel  -e "create database lssea"
+
 
 导入mysql数据库
 
