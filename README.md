@@ -19,8 +19,10 @@ docker exec -i ${CONTAINER ID} mysql -uroot --password=cancel lssea < mysql_lsse
 
 正常会提示mysql连接错误 
 
-需要修改代码里面的db_hostname为mysql
+> 需要修改代码里面的db_hostname为mysql
 
-另外将代码中的http://www.lssea.com 修改为localhost或者docker-machine ip 
+> 另外将代码中的http://www.lssea.com 修改为localhost或者docker-machine ip 
 
-准备代码中添加测试模型配置 避免修改
+> 准备代码中添加测试模型配置 避免修改
+
+已添加测试模型 修改config.php admin/config.php system/config/default.php 里test字段即可
