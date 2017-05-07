@@ -40,4 +40,4 @@ RUN set -xe \
     && rm -rf /var/lib/apt/lists/*
 
 COPY ./php.conf /usr/local/etc/php/conf.d/php.conf
-COPY ./site /usr/share/nginx/html
+#COPY ./lssea /home/wwwroot/www.lssea.com
